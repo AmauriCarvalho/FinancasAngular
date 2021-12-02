@@ -1,0 +1,48 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div align="center"><h1>Todos os Serviços</h1></div>
+<div>
+  <p>
+    <button class="btn-list" (click)=" getServico()">Atualizar</button>
+  </p>
+  <p>
+    <button class="btn-add" (click)="postServico()">Adicionar +</button>
+  </p>
+</div>
+<div>
+  <table class="table" style="width: 80%">
+    <tr >
+      <th class="th-1">ID</th>
+      <th class="th-1">Nome</th>
+      <th class="th-1">Valor</th>
+      <th class="th-1">Incio</th>
+    </tr>
+    <tr *ngFor="let servico of servico; index as x">
+      <td class="td-1">
+        <b>{{ servico.id }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ servico.nome_serv }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ servico.valor_serv }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ servico.dataIni }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ servico.dataFim }}</b>
+      </td>
+      <td>
+        <button class="btn-up" (click)="updateServico(servico)">EDITAR</button>
+      </td>
+      <td>
+        <button class="btn-del" (click)="deleteServico(servico)">DELETAR</button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+

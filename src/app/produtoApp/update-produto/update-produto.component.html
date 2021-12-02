@@ -1,0 +1,28 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div>
+  <h1>Editar produtos</h1>
+  <hr>
+  <form>
+  <p>
+      <label>Nome do produto:</label><br>
+    <input type="text" [(ngModel)]="produto.nome_prod" name="nome_prod">
+  </p>
+  <p>
+    <label>Valor do produto:</label><br>
+  <input type="number" [(ngModel)]="produto.valor_prod" name="valor_prod">
+  </p>
+  <p>
+    <label>unidade:</label><br>
+  <input type="number" [(ngModel)]="produto.unidade" name="unidade">
+  </p>
+  <p>
+    <label>Quantidade:</label><br>
+  <input type="number" [(ngModel)]="produto.quantidade_prod" name="quantidade_prod">
+  </p>
+  <button (click)="editarProduto(produto)">Atualizar</button>
+  </form>
+</div>
+</div>

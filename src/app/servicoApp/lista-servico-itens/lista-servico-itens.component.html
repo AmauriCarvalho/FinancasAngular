@@ -1,0 +1,41 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+</style>
+<div class="body">
+<div align="center"><h1>Serviços da lista</h1></div>
+<div>
+  <table class="table" style="width: 80%">
+    <tr>
+      <th class="th-1">Nome da lista</th>
+      <th class="th-1">ID</th>
+      <th class="th-1">Nome</th>
+      <th class="th-1">Valor</th>
+      <th class="th-1">Ínicio</th>
+      <th class="th-1">Término</th>
+    </tr>
+    <ng-container *ngFor="let listaservico of listaservico; index as i">
+      <tr *ngFor="let item of listaservico.servico; index as x">
+      <td class="td-1">
+        {{ listaservico.nome_listaServ +" ==>"}}
+      </td >
+      <td class="td-1">
+        {{ item.id }}
+      </td>
+      <td class="td-1">
+        {{ item.nome_serv }}
+      </td>
+      <td class="td-1">
+        {{ item.valor_serv }}
+      </td>
+      <td class="td-1">
+        {{ item.dataIni }}
+      </td>
+      <td class="td-1">
+        {{ item.dataFim }}
+      </td>
+    </tr>
+  </ng-container>
+  </table>
+  <button (click)="voltaListaServico()">Voltar</button>
+</div>
+</div >

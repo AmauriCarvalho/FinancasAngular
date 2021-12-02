@@ -1,0 +1,29 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div>
+  <h1>Adicionar contas</h1>
+  <hr>
+  <form>
+  <p>
+      <label>Nome da conta:</label><br>
+    <input type="text" [(ngModel)]="conta.nome_conta" name="nome_conta">
+  </p>
+  <p>
+    <label>Valor da conta:</label><br>
+  <input type="number"   [(ngModel)]="conta.valor_conta" name="valor_conta">
+  </p>
+  <p>
+    <label>Vencimento:</label><br>
+  <input type="datetime" [(ngModel)]="conta.dataVenc" name="dataVenc">
+  </p>
+  <p>
+    <label>Código:</label><br>
+  <input type="number" [(ngModel)]="conta.codigo_conta" name="codigo_conta">
+  </p>
+  <button class="btn-add" (click)="postConta(conta)">Adicionar</button>
+  </form>
+</div>
+<button  (click)=" voltaContas()">Voltar</button>
+</div>

@@ -1,0 +1,16 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div>
+  <h1>Alterar nome da lista</h1>
+  <hr>
+  <form>
+  <p>
+      <label>Nome da lista de contas:</label><br>
+    <input type="text" [(ngModel)]="listaconta.nome_lista" name="nome_lista">
+  </p>
+  <button (click)="editarListaConta(listaconta)">Atualizar</button>
+  </form>
+</div>
+</div>

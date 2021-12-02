@@ -1,0 +1,49 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div align="center"><h1>Todos os produtos</h1></div>
+<div>
+  <p>
+    <button class="btn-list" (click)=" getProduto()">Atualizar</button>
+  </p>
+  <p>
+    <button class="btn-add" (click)="postProduto()">Adicionar +</button>
+  </p>
+</div>
+<div>
+  <table class="table" style="width: 80%">
+    <tr >
+      <th class="th-1">ID</th>
+      <th class="th-1">Nome</th>
+      <th class="th-1">Valor</th>
+      <th class="th-1">Unidade</th>
+      <th class="th-1">Quantidade</th>
+    </tr>
+    <tr *ngFor="let produto of produto; index as x">
+      <td class="td-1">
+        <b>{{ produto.id }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ produto.nome_prod }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ produto.valor_prod }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ produto.unidade }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ produto.quantidade_prod }}</b>
+      </td>
+      <td>
+        <button class="btn-up" (click)="updateProduto(produto)">EDITAR</button>
+      </td>
+      <td>
+        <button class="btn-del" (click)="deleteProduto(produto)">DELETAR</button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+

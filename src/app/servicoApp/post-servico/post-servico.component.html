@@ -1,0 +1,29 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div>
+  <h1>Adicionar servicos</h1>
+  <hr>
+  <form>
+  <p>
+      <label>Nome do serviço:</label><br>
+    <input type="text" [(ngModel)]="servico.nome_serv" name="nome_serv">
+  </p>
+  <p>
+    <label>Valor do serviço:</label><br>
+  <input type="number"   [(ngModel)]="servico.valor_serv" name="valor_serv">
+  </p>
+  <p>
+    <label>Inicio:</label><br>
+  <input type="datetime"[(ngModel)]="servico.dataIni" name="dataIni">
+  </p>
+  <p>
+    <label>Fim:</label><br>
+  <input type="datetime" [(ngModel)]="servico.dataFim" name="dataFim">
+  </p>
+  <button class="btn-add" (click)="postServico(servico)">Adicionar</button>
+  </form>
+</div>
+<button  (click)=" voltaServicos()">Voltar</button>
+</div>

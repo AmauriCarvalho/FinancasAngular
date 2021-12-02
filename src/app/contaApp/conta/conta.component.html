@@ -1,0 +1,49 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div align="center"><h1>Todos as contas</h1></div>
+<div>
+  <p>
+    <button class="btn-list" (click)=" getConta()">Atualizar</button>
+  </p>
+  <p>
+    <button class="btn-add" (click)="postConta()">Adicionar +</button>
+  </p>
+</div>
+<div>
+  <table class="table" style="width: 80%">
+    <tr >
+      <th class="th-1">ID</th>
+      <th class="th-1">Nome</th>
+      <th class="th-1">Valor</th>
+      <th class="th-1">Vencimento</th>
+      <th class="th-1">Código</th>
+    </tr>
+    <tr *ngFor="let conta of conta; index as x">
+      <td class="td-1">
+        <b>{{ conta.id }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ conta.nome_conta }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ conta.valor_conta }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ conta.dataVenc }}</b>
+      </td>
+      <td class="td-1">
+        <b>{{ conta.codigo_conta }}</b>
+      </td>
+      <td>
+        <button class="btn-up" (click)="updateConta(conta)">EDITAR</button>
+      </td>
+      <td>
+        <button class="btn-del" (click)="deleteConta(conta)">DELETAR</button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+

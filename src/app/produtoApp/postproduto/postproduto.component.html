@@ -1,0 +1,37 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div>
+  <h1>Adicionar produtos</h1>
+  <hr>
+  <form>
+  <p>
+      <label>Nome do produto:</label><br>
+    <input type="text" [(ngModel)]="produto.nome_prod" name="nome_prod">
+  </p>
+  <p>
+    <label>Valor do produto:</label><br>
+  <input type="number"   [(ngModel)]="produto.valor_prod" name="valor_prod">
+  </p>
+  <p>
+    <label>Tipo unidade:</label><br>
+  <select [(ngModel)]="produto.unidade" name="unidade">
+    <option value="UN">UN</option>
+    <option value="KG">KG</option>
+    <option value="L">L</option>
+    <option value="M">M</option>
+    <option value="M²">M²</option>
+    <option value="CM">CM</option>
+    <option value="CM²">CM²</option>
+  </select>
+  </p>
+  <p>
+    <label>Quantidade:</label><br>
+  <input type="number" [(ngModel)]="produto.quantidade_prod" name="quantidade_prod">
+  </p>
+  <button class="btn-add" (click)="postProduto(produto)">Adicionar</button>
+  </form>
+</div>
+<button  (click)=" voltaProdutos()">Voltar</button>
+</div>

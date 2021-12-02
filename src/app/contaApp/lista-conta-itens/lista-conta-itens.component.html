@@ -1,0 +1,45 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+</style>
+<div class="body">
+<div align="center"><h1>Contas da lista</h1></div>
+<div>
+  <table class="table" style="width: 80%">
+    <tr>
+      <th class="th-1">Nome da lista</th>
+      <th class="th-1">ID</th>
+      <th class="th-1">Nome</th>
+      <th class="th-1">Valor</th>
+      <th class="th-1">Vencimento</th>
+      <th class="th-1">Código</th>
+      <th class="th-1">Categoria</th>
+    </tr>
+    <ng-container *ngFor="let listaconta of listaconta; index as i">
+      <tr *ngFor="let item of listaconta.conta; index as x">
+      <td class="td-1">
+        {{ listaconta.nome_lista +" ==>"}}
+      </td >
+      <td class="td-1">
+        {{ item.id }}
+      </td>
+      <td class="td-1">
+        {{ item.nome_conta }}
+      </td>
+      <td class="td-1">
+        {{ item.valor_conta }}
+      </td>
+      <td class="td-1">
+        {{ item.dataVenc }}
+      </td>
+      <td class="td-1">
+        {{ item.codigo_conta }}
+      </td>
+      <td class="td-1">
+        {{ listaconta.categoria.nome_categoria }}
+      </td>
+    </tr>
+  </ng-container>
+  </table>
+  <button (click)="voltaListaConta()">Voltar</button>
+</div>
+</div >

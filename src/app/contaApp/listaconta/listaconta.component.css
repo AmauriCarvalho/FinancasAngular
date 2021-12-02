@@ -1,0 +1,65 @@
+.body{
+  font-family: 'Poppins', sans-serif;
+}
+table{
+  margin: 0 auto;
+}
+
+.btn-listar{
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-width: 1px;
+}
+
+.btn-add{
+  background-color: rgb(83, 170, 83);
+  color: aliceblue;
+  border-width: 1px;
+  border-color: rgb(7, 7, 7);
+  border-radius: 10px;
+  padding: 10px;
+  border-style: solid;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-up{
+  background-color: rgb(83, 170, 83);
+  color: aliceblue;
+  border-radius: 10px;
+  border-width: 0px 1px 1px 0px;
+  border-color: rgb(121, 113, 113);
+  padding: 5px;
+  border-style: solid;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-del{
+  background-color: rgb(207, 35, 35);
+  color: aliceblue;
+  border-radius: 10px;
+  border-width: 0px 1px 1px 0px;
+  border-color: rgb(7, 7, 7);
+  padding: 5px;
+  border-style: solid;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.th-1{
+  background-color: grey;
+  border-radius: 9px;
+  color: white;
+}
+
+.td-1{
+  text-align: center;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+}

@@ -1,0 +1,17 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div>
+  <h1>Adicionar lista de produto</h1>
+  <hr>
+  <form>
+  <p>
+      <label>Nome da lista:</label><br>
+    <input type="text" [(ngModel)]="listaproduto.nome_lista" name="nome_prod">
+  </p>
+  <button class="btn-add" (click)="postListaProduto(listaproduto)">Adicionar</button>
+  </form>
+</div>
+<button  (click)=" voltaListaProdutos()">Voltar</button>
+</div>

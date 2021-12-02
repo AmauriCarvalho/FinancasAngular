@@ -1,0 +1,36 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  </style>
+<div class="body">
+<div align="center"><h1>Listas</h1></div>
+<div>
+  <button  class="btn-listar" (click)="acessaItensLista()">Exibir produtos das listas</button>
+  <p>
+    <button class="btn-add" (click)="postListaProduto()">Adicionar lista</button>
+  </p>
+</div>
+<div>
+  <table class="table" style="width: 80%">
+    <tr>
+      <th class="th-1" >ID</th>
+      <th class="th-1" >Nome</th>
+      <th class="th-1" >Categoria</th>
+    </tr>
+    <tr *ngFor="let listaproduto of listaproduto; index as x">
+      <td class="td-1">
+        {{ listaproduto.id }}
+      </td>
+      <td class="td-1">
+        {{ listaproduto.nome_lista }}
+      </td>
+      <td>
+        <button class="btn-up" (click)="updateListaProduto(listaproduto)">Editar</button>
+      </td>
+      <td>
+        <button class="btn-del" (click)="deleteListaProduto(listaproduto)">Deletar</button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+
